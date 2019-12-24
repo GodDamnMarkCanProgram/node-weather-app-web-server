@@ -3,7 +3,7 @@ const fahrenheitToCelsius = require('fahrenheit-to-celsius')
 
 
 const forecast = (longditude, latitude, callback) =>{
-    const url = 'https://api.darksky.net/forecast/365e05c764f6bbc5e349e7c9cb40ec7f/' + longditude + ',' + latitude + '?units=auto'
+    const url = 'https://api.darksky.net/forecast/365e05c764f6bbc5e349e7c9cb40ec7f/' + longditude + ',' + latitude
     request({url, json:true}, (error, {body}) => {
         if(error){
             callback('Unable to connect to service', undefined)
